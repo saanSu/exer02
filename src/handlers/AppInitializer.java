@@ -1,5 +1,7 @@
 package handlers;
 
+import java.util.LinkedHashSet;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -23,6 +25,8 @@ public class AppInitializer implements ServletContextListener {
 			e.printStackTrace();
 		}
 		ServletContext ctx = sce.getServletContext();	
-		ctx.setRequestCharacterEncoding("UTF-8");	
+		ctx.setRequestCharacterEncoding("UTF-8");
+		ctx.setAttribute("users", new LinkedHashSet<>());
+		
 	}
 }

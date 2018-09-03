@@ -11,8 +11,8 @@
 	아직 사용자 계정이 없으십니까?<br/>
 </p>
 <p style="font-size: small;">
-	아이디는 영문,숫자 4~12자 내외이며, 이름은 한글만 설정가능하고,<br/>
-	비밀번호는 4자 이상으로 설정바랍니다. <br/>
+	아이디는 영문,숫자 4~12자, 이름은 한글만 설정가능하고,<br/>
+	비밀번호는 4자 이상으로 설정가능합니다. <br/>
 </p>
 <form action="<%=application.getContextPath() %>/joined.jsp" method="post" autocomplete="off">
 	<p>

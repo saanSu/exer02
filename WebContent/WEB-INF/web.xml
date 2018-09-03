@@ -15,4 +15,7 @@
 	<listener>
 		<listener-class>handlers.AppInitializer</listener-class>
 	</listener>
+	<listener>
+		<listener-class>handlers.SessionHandler</listener-class>
+	</listener>
 </web-app>

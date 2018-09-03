@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
-	response.setStatus(200);
-%>
 <%@ include file="/layout/top.jspf"%>
 <h1>비밀번호 변경</h1>  
 <p style="font-size: small;">
