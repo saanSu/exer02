@@ -18,4 +18,27 @@
 	<listener>
 		<listener-class>handlers.SessionHandler</listener-class>
 	</listener>
+	<filter>
+		<filter-name>auth</filter-name>
+		<filter-class>filters.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>auth</filter-name>
+		<url-pattern>/logout.jsp</url-pattern>
+		<url-pattern>/message/*</url-pattern>
+		<url-pattern>/account/*</url-pattern>
+	</filter-mapping>
 </web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,11 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 public class SessionHandler implements HttpSessionListener {
+	@Override
+	public void sessionCreated(HttpSessionEvent se) {
+		HttpSession session  = se.getSession();
+		// session.setAttribute("auth", false);
+	}
 	
 	@Override
 	public void sessionDestroyed(HttpSessionEvent se) {
