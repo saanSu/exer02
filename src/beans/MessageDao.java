@@ -10,7 +10,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class MessageDao extends Dao {
 	public int addMessage(String code, String sender, String receiver, String content, Date senddate) {
 		try {
@@ -31,7 +30,7 @@ public class MessageDao extends Dao {
 			return -1;
 		}
 	}
-
+	
 	public List<Map> getMessagesByReceiver(String receiver) {
 		try {
 			Connection conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
@@ -63,8 +62,6 @@ public class MessageDao extends Dao {
 		}
 	}
 	// receivedate update ...
-
-	
 	
 }
 
