@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LoginLogDao extends Dao {
+public class LoginLogDao extends JdbcDao {
 	public int addLog(String id) {
 		try {
 			Connection conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
@@ -16,7 +16,7 @@ public class LoginLogDao extends Dao {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 			ps.setDate(2, new Date(System.currentTimeMillis()));
-			int n = ps.executeUpdate(); // send ¡æ receive ÀÛ¾÷À» ÇÔ.
+			int n = ps.executeUpdate(); // send ï¿½ï¿½ receive ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½.
 			conn.close();
 			return n;
 		} catch (Exception e) {

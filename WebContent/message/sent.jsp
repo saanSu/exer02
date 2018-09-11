@@ -20,6 +20,7 @@
 	} else {
 %>
 <%@ include file="/layout/top.jspf"%>
+<%@ include file="/layout/nav.jspf" %>
 <h1>《쪽지 전송》</h1>
 <p>
 	<%=receiver %> 님에게 쪽지를 발송하였습니다.<br/>

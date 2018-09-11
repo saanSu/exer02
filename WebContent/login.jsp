@@ -25,9 +25,12 @@
 	</p>
 	<%} %>
 	<p>
-		<input type="checkbox" name="keep" value="on"/>인증유지하기
+		<input type="checkbox" name="keep" value="okay"/>인증유지하기
 	</p>
 	<p>
 		<button type="submit" style="font-size: 16px; padding: 5px">인 증 하 기</button>
 	</p>
 </form>
+
+
+

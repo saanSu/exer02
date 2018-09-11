@@ -1,0 +1,23 @@
+<%@ page import="java.sql.Date"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm MM.dd.YYYY");
+	String logid = (String) session.getAttribute("logid");
+	Date latest = (Date) session.getAttribute("latest");
+%>
+<p style="text-align: right;">
+	〔<b><%=logid%></b>, LogOn / <small>마지막로그인 : <%=latest == null ? "-" : sdf.format(latest)%></small>〕
+</p>
+<p style="text-align: right;">
+	
+	<a href="<%=application.getContextPath()%>/board/list.jsp"><button
+			type="button">게시판</button></a> 
+	<a href="<%=application.getContextPath()%>/board/send.jsp"><button
+			type="button">메시지</button></a> 		
+	<a href="<%=application.getContextPath()%>/account/change.jsp"><button
+			type="button">암호변경</button></a> <a
+		href="<%=application.getContextPath()%>/logout.jsp"><button
+			type="button">로그아웃</button></a>
+</p>

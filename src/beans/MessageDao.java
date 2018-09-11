@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MessageDao extends Dao {
+public class MessageDao extends JdbcDao {
 	public int addMessage(String code, String sender, String receiver, String content, Date senddate) {
 		try {
 			Connection conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
@@ -22,7 +22,7 @@ public class MessageDao extends Dao {
 			ps.setString(3, receiver);
 			ps.setString(4, content);
 			ps.setDate(5, senddate);
-			int n = ps.executeUpdate(); // send ¡æ receive ÀÛ¾÷À» ÇÔ.
+			int n = ps.executeUpdate(); // send ï¿½ï¿½ receive ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½.
 			conn.close();
 			return n;
 		} catch (Exception e) {

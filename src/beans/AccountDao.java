@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class AccountDao extends Dao {
+public class AccountDao extends JdbcDao {
 	public int addAccount(String id, String pass, String name, String gender) {
 		try {
 			Connection conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
@@ -17,7 +17,7 @@ public class AccountDao extends Dao {
 			ps.setString(2, pass);
 			ps.setString(3, name);
 			ps.setString(4, gender);
-			int n = ps.executeUpdate(); // send ¡æ receive ÀÛ¾÷À» ÇÔ.
+			int n = ps.executeUpdate(); // send ï¿½ï¿½ receive ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½.
 			conn.close();
 			return n;
 		} catch (Exception e) {
@@ -58,7 +58,7 @@ public class AccountDao extends Dao {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, newPass);
 			ps.setString(2, id);
-			int n = ps.executeUpdate(); // send ¡æ receive ÀÛ¾÷À» ÇÔ.
+			int n = ps.executeUpdate(); // send ï¿½ï¿½ receive ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½.
 			conn.close();
 			return n;
 		} catch (Exception e) {

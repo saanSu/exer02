@@ -15,19 +15,13 @@ public class AuthFilter extends HttpFilter {
 			throws IOException, ServletException {
 		System.out.println("[AuthFilter] at " + request.getRequestURI());
 		HttpSession session =request.getSession();
-		// 사용자세션에 인증을 나타내는 키가 
-	//	boolean b = (Boolean)session.getAttribute("auth");
 		if(session.getAttribute("auth")!=null) {
-			// session.getAttribute("auth")!=null
-			// 있으면 통과
 			chain.doFilter(request, response);
 		}else {
-			// 없으면 로그인으로 리다이렉트
+			session.setAttribute("dest", request.getRequestURI());
+			
 			response.sendRedirect(request.getContextPath()+"/login.jsp");
 		}
-		
-		
-		
 		
 	}
 

@@ -4,6 +4,7 @@
 	boolean hasErr = session.getAttribute("senterror")!=null;
 %>
 <%@ include file="/layout/top.jspf"%>
+<%@ include file="/layout/nav.jspf" %>
 <h1>《쪽지 전송》</h1>  
 <p style="font-size: small;">
 	해당 사용자 계정 (<%=session.getAttribute("logid") %>)을 발신자로<br/>
